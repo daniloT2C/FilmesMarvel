@@ -147,20 +147,12 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="374,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="374,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Pesquisa_e_OrdenaFilmes" sap:VirtualizedContainerService.HintSize="374,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UseBrowserChromeRottenTomatoesMoviesTVShowsMovieTrailersReviewsRottenTomatoes.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="wf_Pesquisa_e_OrdenaFilmes" sap:VirtualizedContainerService.HintSize="374,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="wf_Pesquisa_e_OrdenaFilmes.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">
-          <VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="argstrNomedoFilmeAserPesquisado">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;site&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="arg_inDtFilmes">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="arg_inDtFilmes" />
-        </InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="arg_outDtAvalicoes">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="arg_outDtAvalicoes" />
-        </OutArgument>
+        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="argstrNomedoFilmeAserPesquisado">[in_Config("site").ToString]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="arg_inDtFilmes">[arg_inDtFilmes]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="arg_outDtAvalicoes">[arg_outDtAvalicoes]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
