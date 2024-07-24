@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="arg_inDtAvalicoes" Type="InArgument(sd:DataTable)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1497,986</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1497,1151</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -40,6 +40,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -115,20 +116,20 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="492,921" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="492,1086" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Wf_Cria_e_EnviarRelatório" sap:VirtualizedContainerService.HintSize="450,856" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Wf_Cria_e_EnviarRelatório" sap:VirtualizedContainerService.HintSize="450,1021" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[arg_inDtAvalicoes]" DisplayName="Write Range Workbook - Adiciona Tabela ao excel" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Filmes" WorkbookPath="C:\Users\danilo.cuencas\Desktop\prj_FilmesMarvel_Avaliacao\Data\Input\Filmes.xlsx" />
-      <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;&amp;quot;&lt;/SPAN&gt;&lt;SPAN&gt;Prezado, segue a lista de avalia&amp;#231;&amp;#227;o dos filmes.&lt;/SPAN&gt;&lt;SPAN&gt;&amp;quot;&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="60eff6d0-87cb-479b-aaca-d08a66638526" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,597" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Filmes da Marvel​" To="[New String(){&quot;tryopenia@gmail.com&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
+      <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;&amp;quot;&lt;/SPAN&gt;&lt;SPAN&gt;Prezado, segue a lista de avalia&amp;#231;&amp;#227;o dos filmes.&lt;/SPAN&gt;&lt;SPAN&gt;&amp;quot;&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="60eff6d0-87cb-479b-aaca-d08a66638526" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,606" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Filmes da Marvel​" To="[New String(){&quot;tryopenia@gmail.com&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
         <umam:SendMailConnections.AttachmentList>
           <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
             <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("Data\\Input\\Filmes.xlsx")]</InArgument>
@@ -169,6 +170,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </umam:SendMailConnections>
+      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - mata google chrome" sap:VirtualizedContainerService.HintSize="388,156" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome.exe" />
     </Sequence>
   </Sequence>
 </Activity>
